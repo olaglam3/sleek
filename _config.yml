@@ -11,7 +11,7 @@ theme_version: 1.0.4
 title:              Nubia
 logo:               # Logo image URL
 description:        Thoughts, Stories and Ideas
-baseurl:            '' # The subpath of your site, e.g. /blog
+baseurl:            '/sleek' # The subpath of your site, e.g. /blog
 url:                'https://olaglam3.github.io/sleek/' # The base hostname & protocol for your site
 twitter:            https://twitter.com/aspirethemes
 facebook:           https://www.facebook.com/aspirethemes
