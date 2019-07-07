@@ -12,7 +12,7 @@ title:              Nubia
 logo:               # Logo image URL
 description:        Thoughts, Stories and Ideas
 baseurl:            '/sleek' # The subpath of your site, e.g. /blog
-url:                'https://star-clam.cloudvent.net/sleek/' # The base hostname & protocol for your site
+url:                'https://star-clam.cloudvent.net' # The base hostname & protocol for your site
 twitter:            https://twitter.com/aspirethemes
 facebook:           https://www.facebook.com/aspirethemes
 instagram:          https://www.instagram.com/aspirethemes
