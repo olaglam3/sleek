@@ -26,6 +26,7 @@ sass:
 gems:
   - jekyll-paginate
   - jekyll/tagging
+  - jekyll-target-blank
 
 include:
   - _pages
@@ -57,3 +58,4 @@ authors:
     website:  http://aspirethemes.com
     github:   https://github.com/aspirethemes
     twitter:  https://twitter.com/aspirethemes
+
