@@ -23,7 +23,7 @@ paginate:  11
 sass:
   style: compressed
 
-gems:
+plugins:
   - jekyll-paginate
   - jekyll/tagging
   - jekyll-target-blank
