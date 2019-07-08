@@ -18,7 +18,7 @@ facebook:           https://www.facebook.com/aspirethemes
 instagram:          https://www.instagram.com/aspirethemes
 
 markdown:  kramdown
-permalink: pretty
+permalink: /:title/
 paginate:  11
 sass:
   style: compressed
