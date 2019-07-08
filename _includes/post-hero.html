@@ -3,7 +3,7 @@
     <div class='o-grid__col o-grid__col--4-4-s o-grid__col--4-4-m o-grid__col--2-3-l'>
       <div class='c-post-hero__media'>
         {% if site.lazyimages == "enabled" %}
-          <div class='c-post-hero__image js-fadein' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="{{ page.image | prepend: site.baseurl  }}" alt="{{ page.title }}"></div>
+          <div class='c-post-hero__image js-fadein' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-srcset="{{ page.image | prepend: site.baseurl  }}" alt="{{ page.title }}"></div>
           {% else %}
           <div class='c-post-hero__image js-fadein' style='background-image: url({{ page.image | prepend: site.baseurl }})'></div>
         {% endif %}
