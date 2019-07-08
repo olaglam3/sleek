@@ -35,6 +35,7 @@ GEM
       sass (~> 3.4)
     jekyll-seo-tag (2.5.0)
       jekyll (~> 3.3)
+    jekyll-paginate (1.1.0)
     jekyll-sitemap (1.2.0)
       jekyll (~> 3.3)
     jekyll-watch (2.1.2)
@@ -72,7 +73,7 @@ DEPENDENCIES
   jekyll-feed
   jekyll-seo-tag
   jekyll-sitemap
-  jekyll-tagging
+  jekyll-paginate
   kramdown
   rouge
 
