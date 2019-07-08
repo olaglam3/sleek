@@ -3,13 +3,9 @@
 
   <div class='c-post-card {% if page.url == '/' %} {% if forloop.first == true %} c-post-card--first {% endif %} {% endif %}'>
     <div class='c-post-card__media'>
-        {% if site.lazyimages == "enabled" %}
-            <div class='c-post-hero__image js-fadein' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-srcset="{{ page.image | prepend: site.baseurl  }}" alt="{{ page.title }}"></div>
-        {% else %}
-             <a href='{{ post.url | prepend: site.baseurl }}' class='c-post-card__image js-fadein' style='background-image: url({{ post.image | prepend: site.baseurl }})'>
-        {% endif %}
-        
-        
+           
+          <a href='{{ post.url | prepend: site.baseurl }}' class='c-post-card__image js-fadein' style='background-image: url(/img/blank.png) center center no-repeat; background-size: cover;" data-echo-background="{{ post.image | prepend: site.baseurl }}">
+            
         {% if post.featured %}
           <span title='Featured Post'>
             <span class='c-post-card--featured__icon' data-icon='ei-star' data-size='s'></span>
