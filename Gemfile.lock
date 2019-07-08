@@ -62,12 +62,15 @@ GEM
 
 PLATFORMS
   ruby
+  x64-mingw32
 
 DEPENDENCIES
   bundler
   jekyll
   jekyll-paginate
   jekyll-tagging
+  kramdown
+  rouge
 
 BUNDLED WITH
-   1.13.6
+   2.0.1
