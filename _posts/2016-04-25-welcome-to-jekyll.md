@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Welcome to Jekyll!
+description: I have decided to write a series on my garden studio, why I decided to build it, the gear I selected and how I use it. Here is a quick overview of my plans for this series
 featured: true
 author: ahmad
 tags: [frontpage, jekyll, blog]
