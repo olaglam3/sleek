@@ -74,3 +74,8 @@ kramdown:
   syntax_highlighter_opts:
     block:
       line_numbers: true
+
+# Lazy Images ("enabled" or "disabled")
+lazyimages: "disabled"
+
+exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock]
