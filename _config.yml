@@ -31,6 +31,14 @@ plugins:
   - jekyll-seo-tag
   - jekyll/tagging
     
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    category: '/category/:name/'
+
 
 include:
   - _pages
