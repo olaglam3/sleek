@@ -25,7 +25,9 @@
               <ul class='c-nav o-plain-list'>
                 {% include navigation.html %}
                 <li class='c-nav__item'>
-                  {% include search-lunr.html %}
+                  <a class='toggle-search-button js-search-toggle' href='#' aria-label='Search'>
+                    <span class='c-nav__icon' data-icon='ei-search' data-size='s'></span>
+                  </a>
                 </li>
               </ul>
             </nav>
