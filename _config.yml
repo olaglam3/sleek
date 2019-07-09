@@ -12,7 +12,7 @@ title:              Nubia
 logo:               # Logo image URL
 description:        Thoughts, Stories and Ideas
 baseurl:            '/new' # The subpath of your site, e.g. /blog
-url:                'https://olaglam3.github.io/' # The base hostname & protocol for your site
+url:                'https://olaglam3.github.io' # The base hostname & protocol for your site
 twitter:            https://twitter.com/aspirethemes
 facebook:           https://www.facebook.com/aspirethemes
 instagram:          https://www.instagram.com/aspirethemes
