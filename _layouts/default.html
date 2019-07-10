@@ -15,16 +15,34 @@
     {% include footer.html %}
   </div>
 
-  <script src="{{ defer '/js/jquery.min.js' | prepend: site.baseurl }}">                 </script>
-  <script src="{{ defer '/js/jquery.viewportchecker.min.js' | prepend: site.baseurl }}"> </script>
-  <script src="{{ defer '/js/jquery.ghostHunter.min.js' | prepend: site.baseurl }}">     </script>
-  <script src="{{ defer '/js/evil-icons.min.js' | prepend: site.baseurl }}">             </script>
-  <script src="{{ defer '/js/jquery.fitvids.js' | prepend: site.baseurl }}">             </script>
-  <script src="{{ defer '/js/instafeed.min.js' | prepend: site.baseurl }}">              </script>
-  <script src="{{ defer '/js/transition.js' | prepend: site.baseurl }}">                 </script>
-  <script src="{{ defer '/js/zoom.min.js' | prepend: site.baseurl }}">                   </script>
-  <script src="{{ defer '/js/app.js' | prepend: site.baseurl }}">                        </script>
+  <script src="{{ '/js/jquery.min.js' | prepend: site.baseurl }}">                 </script>
+  <script src="{{ '/js/jquery.viewportchecker.min.js' | prepend: site.baseurl }}"> </script>
+  <script src="{{ '/js/jquery.ghostHunter.min.js' | prepend: site.baseurl }}">     </script>
+  <script src="{{ '/js/evil-icons.min.js' | prepend: site.baseurl }}">             </script>
+  <script src="{{ '/js/jquery.fitvids.js' | prepend: site.baseurl }}">             </script>
+  <script src="{{ '/js/instafeed.min.js' | prepend: site.baseurl }}">              </script>
+  <script src="{{ '/js/transition.js' | prepend: site.baseurl }}">                 </script>
+  <script src="{{ '/js/zoom.min.js' | prepend: site.baseurl }}">                   </script>
+  <script src="{{ '/js/app.js' | prepend: site.baseurl }}">                        </script>
 
+  <script type="text/javascript">
+function parseJSAtOnload() {
+var links = ["defer1.js", "defer2.js", "defer1.js", "defer2.js", "defer3.js"],
+headElement = document.getElementsByTagName("head")[0],
+linkElement, i;
+for (i = 0; i < links.length; i++) {
+linkElement = document.createElement("script");
+linkElement.src = links[i];
+headElement.appendChild(linkElement);
+}
+}
+if (window.addEventListener)
+window.addEventListener("load", parseJSAtOnload, false);
+else if (window.attachEvent)
+window.attachEvent("onload", parseJSAtOnload);
+else window.onload = parseJSAtOnload;
+</script>
+  
 </body>
 
 </html>
