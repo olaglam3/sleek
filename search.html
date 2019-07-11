@@ -7,3 +7,17 @@
 <!-- Script pointing to search-script.js -->
 <script src="/js/search-script.js" type="text/javascript"></script>
 
+
+<!-- Configuration -->
+<script>
+SimpleJekyllSearch({
+  searchInput: document.getElementById('search-input'),
+  resultsContainer: document.getElementById('results-container'),
+  json: '/search.json',searchResultTemplate: '<a href='{url}' class='c-search-result'>\
+        <div class='c-search-result__content'>\
+          <h3 class='c-search-result__title'>{{title}}</h3>\
+          <time class='c-search-result__date'>{date}</time>\
+        </div>\
+      </a>',
+})
+</script>
