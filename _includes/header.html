@@ -26,6 +26,7 @@
                 {% include navigation.html %}
                 <li class='c-nav__item'>
                   <a class='toggle-search-button js-search-toggle' href='#' aria-label='Search'>
+                     <span class='c-nav__icon' data-icon='ei-search' data-size='s'>{% include search.html %}</span>
                      {% include search.html %}
                   </a>
                 </li>
@@ -43,4 +44,4 @@
   </div>
 </header>
 
-
+{% include search-form.html %}
