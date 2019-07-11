@@ -25,7 +25,7 @@
   SimpleJekyllSearch({
     searchInput: document.getElementById('search'),
     resultsContainer: document.getElementById('results'),
-    searchResultTemplate: '<li><a href="{url}" tabindex="1"><p>{title}</p><span>{url}</span></a></li>',
+    searchResultTemplate: '<li><a href="{url}" class='c-search-result'><p class='c-search-result__title'>{title}</p><span>{url}</span></a></li>',
     noResultsText: '<li><p>No results found!</p></li>',
     json: '/search.json'
   })
