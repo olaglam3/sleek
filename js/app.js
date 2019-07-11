@@ -89,7 +89,7 @@ $(document).ready(function() {
   search_field.ghostHunter({
     results: search_results,
     onKeyUp: true,
-    rss: baseurl + search.json,
+    rss: baseurl + '/feed.xml',
     result_template : search_result_template,
     zeroResultsInfo : false,
     displaySearchInfo: false,
