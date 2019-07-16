@@ -3,7 +3,7 @@
     <div class='o-grid__col o-grid__col--4-4-s o-grid__col--3-4-m o-grid__col--2-4-l o-grid__col--center'>
       <form class='c-search__form'>
         <span class='c-search__icon' data-icon='ei-search' data-size='m'></span>
-        <label for='search-field' class='u-hidden-visually'>Search</label>
+        <label for='search-field' id='search-input' class='u-hidden-visually'>Search</label>
         <input id='search-field' type='search' class='c-search__input js-search-input' placeholder='Type to Search'>
       </form>
     </div>
@@ -11,7 +11,7 @@
 
   <div class='o-grid'>
     <div class='o-grid__col o-grid__col--4-4-s o-grid__col--3-4-m o-grid__col--2-4-l o-grid__col--center'>
-      <div class='c-search-results js-search-results'></div>
+      <div id="results" class='c-search-results js-search-results'></div>
     </div>
   </div>
 
@@ -49,17 +49,16 @@ var search_field = $('.js-search-input'),
     }
   });
 
-  search_field.ghostHunter({
-    results: search_results,
-    onKeyUp: true,
-    rss: base_url + '/feed.xml',
-    result_template : search_result_template,
-    zeroResultsInfo : false,
-    displaySearchInfo: false,
-    includepages : true,
-    before: function() {
-      search_results.fadeIn();
-    }
-  });
+ SimpleJekyllSearch({
+  search-input: document.getElementById('search-input'),
+  resultsContainer: document.getElementById('results'),
+  json: '/search.json',
+  searchResultTemplate: '<a href='{{link}}' class='c-search-result'> <div class='c-search-result__content'> <h3 class='c-search-result__title'>{{title}}</h3> <time class='c-search-result__date'>{{pubDate}}</time> </div> </a>'
+});
+
+</script>
+
+
+<script>
 
 </script>
