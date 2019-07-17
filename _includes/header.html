@@ -25,15 +25,12 @@
               <ul class='c-nav o-plain-list'>
                 {% include navigation.html %}
                 <li class='c-nav__item'>
-                  <a href='/search.html' aria-label='Search'>
-                     <span class='c-nav__icon' data-icon='ei-search' data-size='s'></span>
+                  <a class='toggle-search-button js-search-toggle' href='#' aria-label='Search'>
+                    <span class='c-nav__icon' data-icon='ei-search' data-size='s'>{% include search-lunr.html %}</span>
                   </a>
-                 
                 </li>
               </ul>
-
             </nav>
-                           {% include search-lunr.html %}
           </div>
         </div>
       </div>
@@ -46,4 +43,4 @@
   </div>
 </header>
 
-
+{% include search-form.html %}
