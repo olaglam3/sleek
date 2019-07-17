@@ -104,7 +104,7 @@
 }
 
 .c-search-results {
-
+  display: none;
   height: calc(100vh - #{quadruple(double($base-spacing-unit)) + double($base-spacing-unit) + half($base-spacing-unit)}); // => calc(100vh - 168px)
   overflow: auto;
   white-space: normal;
