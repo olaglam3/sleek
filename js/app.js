@@ -86,12 +86,7 @@ $(document).ready(function() {
     }
   });
 
-SimpleJekyllSearch({
-  search-input: document.getElementById('search_field'),
-  resultsContainer: document.getElementById('results'),
-  json: '/search.json',
-  searchResultTemplate: '<a href='{url}' class='c-search-result'> <div class='c-search-result__content'> <h3 class='c-search-result__title'>{title}</h3> <time class='c-search-result__date'>{date}</time> </div> </a>'
-});
+
 
   // =====================
   // Ajax Load More
