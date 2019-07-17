@@ -25,9 +25,9 @@
               <ul class='c-nav o-plain-list'>
                 {% include navigation.html %}
                 <li class='c-nav__item'>
-                  <span class='toggle-search-button js-search-toggle' aria-label='Search'>
-                    <span class='c-nav__icon' data-icon='ei-search' data-size='s'>'/includes/search-form.html'</span>
-                  </span>
+                  <a class='toggle-search-button js-search-toggle' href='#' aria-label='Search'>
+                    <span class='c-nav__icon' data-icon='ei-search' data-size='s'></span>
+                  </a>
                 </li>
               </ul>
             </nav>
@@ -41,42 +41,6 @@
     </div>
 
   </div>
-  
-  <script src="/js/search-script.js" type="text/javascript"></script>
-
-
-<script>
-var search_field = $('.js-search-input'),
-      search_results = $('.js-search-results'),
-      toggle_search = $('.js-search-toggle'),
-      search_result_template = "\
-      <a href='{{link}}' class='c-search-result'>\
-        <div class='c-search-result__content'>\
-          <h3 class='c-search-result__title'>{{title}}</h3>\
-          <time class='c-search-result__date'>{{pubDate}}</time>\
-        </div>\
-      </a>";
-  toggle_search.click(function(e) {
-    e.preventDefault();
-    $('.js-search').addClass('is-active');
-    // If off-canvas is active, just disable it
-    $('.js-off-canvas-container').removeClass('is-active');
-    setTimeout(function() {
-      search_field.focus();
-    }, 500);
-  });
-  $('.c-search, .js-search-close, .js-search-close .icon').on('click keyup', function(event) {
-    if (event.target == this || event.target.className == 'js-search-close' || event.target.className == 'icon' || event.keyCode == 27) {
-      $('.c-search').removeClass('is-active');
-    }
-  });
- SimpleJekyllSearch({
-  search-input: document.getElementById('search-input'),
-  resultsContainer: document.getElementById('results'),
-  json: '/search.json',
-  searchResultTemplate: '<a href='{url}' class='c-search-result'> <div class='c-search-result__content'> <h3 class='c-search-result__title'>{title}</h3> <time class='c-search-result__date'>{date}</time> </div> </a>'
-});
-</script>
 </header>
-
+<script src="/js/search-script.js" type="text/javascript"></script>
 {% include search-form.html %}
