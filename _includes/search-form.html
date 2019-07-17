@@ -43,11 +43,7 @@ var search_field = $('.js-search-input'),
       search_field.focus();
     }, 500);
   });
-  $('.c-search, .js-search-close, .js-search-close .icon').on('click keyup', function(event) {
-    if (event.target == this || event.target.className == 'js-search-close' || event.target.className == 'icon' || event.keyCode == 27) {
-      $('.c-search').removeClass('is-active');
-    }
-  });
+ 
  SimpleJekyllSearch({
   search-input: document.getElementById('search_field'),
   resultsContainer: document.getElementById('results'),
