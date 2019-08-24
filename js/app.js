@@ -57,35 +57,56 @@ $(document).ready(function() {
   // Search
   // =====================
 
-  var search_field = $('.js-search-input'),
-      search_results = $('.js-search-results'),
-      toggle_search = $('.js-search-toggle'),
-      search_result_template = "\
-      <a href='{{link}}' class='c-search-result'>\
-        <div class='c-search-result__content'>\
-          <h3 class='c-search-result__title'>{{title}}</h3>\
-          <time class='c-search-result__date'>{{pubDate}}</time>\
-        </div>\
-      </a>";
+/* =======================
+  // Toggle Menu and Search
+  ======================= */
+  var $menuOpenButton = $(".menu-button"),
+      $menuCloseButton = $(".menu-close"),
+      $navMenu = $(".nav-menu"),
 
-  toggle_search.click(function(e) {
-    e.preventDefault();
-    $('.js-search').addClass('is-active');
+      $searchOpenButton = $(".search-button"),
+      $searchCloseButton = $(".search-close-button"),
+      $search = $(".search");
 
-    // If off-canvas is active, just disable it
-    $('.js-off-canvas-container').removeClass('is-active');
-
-    setTimeout(function() {
-      search_field.focus();
-    }, 500);
-  });
-
-  $('.c-search, .js-search-close, .js-search-close .icon').on('click keyup', function(event) {
-    if (event.target == this || event.target.className == 'js-search-close' || event.target.className == 'icon' || event.keyCode == 27) {
-      $('.c-search').removeClass('is-active');
+  $(window).on("resize", function () {
+    var e = $(this);
+    if (e.width() >= 991) {
+      $navMenu.removeClass("active"); // Remove class - "active" if width window more than 991px
     }
   });
 
+  $menuOpenButton.on("click", function() {
+    openMenu();
+  });
+
+  $menuCloseButton.on("click", function() {
+    closeMenu();
+  });
+
+  $searchOpenButton.on("click", function() {
+    openSearch();
+  });
+
+  $searchCloseButton.on("click", function() {
+    closeSearch();
+  });
+
+
+  function openMenu() {
+    $navMenu.addClass("active");
+  }
+
+  function closeMenu() {
+    $navMenu.removeClass("active");
+  }
+
+  function openSearch() {
+    $search.addClass("active");
+  }
+
+  function closeSearch() {
+    $search.removeClass("active");
+  }
 
 
   // =====================
@@ -150,3 +171,5 @@ $(document).ready(function() {
     instagramFeed.run();
   }
 });
+
+
